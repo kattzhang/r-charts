@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { isEqual, pick, } from 'lodash';
-import { Debounce } from 'lodash-decorators';
+import { isEqual, pick, debounce, } from 'lodash';
 import echartsLib from 'echarts/lib/echarts';
 import 'echarts/lib/component/title';
 import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/legend';
 import 'echarts/lib/component/dataZoom';
-import { hasOwn } from './utils';
 
 export default class ChartsCore extends Component {
 
@@ -17,8 +15,9 @@ export default class ChartsCore extends Component {
 
   constructor(props) {
     super(props);
-    this.echarts = null;
     this.el = null;
+    this.echarts = null;
+    this.handleResize = debounce(this.handleResize.bind(this), 1000);
   }
 
   componentDidMount() {
@@ -83,17 +82,13 @@ export default class ChartsCore extends Component {
     const { events } = this.props;
     const inst = this.echarts;
     const bind = (eventName, fn) => {
-      if (typeof eventName === 'string' && typeof fn === 'function') {
-        inst.on(eventName, (params) => {
-          fn(params, inst);
-        });
-      }
+      inst.on(eventName, (params) => {
+        fn(params, inst);
+      });
     };
 
-    for(const eventName in events) {
-      if (hasOwn(events, eventName)) {
-        bind(eventName, events[eventName]);
-      }
+    for(const key in events) {
+      bind(key, events[key]);
     }
   };
 
@@ -105,8 +100,7 @@ export default class ChartsCore extends Component {
     window.removeEventListener('resize', this.handleResize);
   }
 
-  @Debounce(100)
-  handleResize = () => {
+  handleResize() {
     this.echarts.resize();
   }
 

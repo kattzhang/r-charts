@@ -2,10 +2,10 @@
   "name": "r-charts",
   "version": "0.0.1",
   "description": "A simple chart components based on React and Echarts",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config ./build/webpack.config.js",
-    "build": "rm -f -r lib && node build/rollup.config.js && cp -f lib/index.min.js lib/style.min.css"
+    "build": "rm -fr lib && node build/rollup.config.js"
   },
   "keywords": [
     "react",
@@ -14,19 +14,18 @@
   "author": "KattZhang",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.15",
-    "lodash-decorators": "^6.0.1"
+    "lodash": "^4.17.15"
   },
   "peerDependencies": {
-    "react": ">=0.13.2 || ^0.14 || ^15.0.0 || >=16.0.0",
-    "prop-types": "^15.5.7",
-    "echarts": "^3.0.0 || ^4.0.0"
+    "react": ">=16.0.0",
+    "prop-types": ">=15.0.0",
+    "echarts": ">=3.0.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "echarts": "^4.4.0",
     "html-webpack-plugin": "^3.2.0",
@@ -35,7 +34,11 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "rollup": "^1.25.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.3",
     "style-loader": "^1.0.0",
+    "uglify-es": "^3.3.9",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2"
