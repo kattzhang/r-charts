@@ -1,7 +1,7 @@
 {
   "name": "r-charts",
   "version": "0.0.1",
-  "description": "Chart components based on React and Echarts",
+  "description": "A simple chart components based on React and Echarts",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config ./build/webpack.config.js",
@@ -15,8 +15,12 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.15",
-    "lodash-decorators": "^6.0.1",
-    "prop-types": "^15.7.2"
+    "lodash-decorators": "^6.0.1"
+  },
+  "peerDependencies": {
+    "react": ">=0.13.2 || ^0.14 || ^15.0.0 || >=16.0.0",
+    "prop-types": "^15.5.7",
+    "echarts": "^3.0.0 || ^4.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -30,13 +34,11 @@
     "less-loader": "^5.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "rollup": "^1.25.1",
     "style-loader": "^1.0.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.2"
-  },
-  "directories": {
-    "example": "examples"
   },
   "repository": {
     "type": "git",
