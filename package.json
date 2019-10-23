@@ -1,0 +1,43 @@
+{
+  "name": "r-charts",
+  "version": "0.0.1",
+  "description": "Chart components based on React and Echarts",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --progress --config ./build/webpack.config.js",
+    "build": "rm -f -r lib && node build/rollup.config.js && cp -f lib/index.min.js lib/style.min.css"
+  },
+  "keywords": [
+    "react",
+    "echarts"
+  ],
+  "author": "KattZhang",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "lodash-decorators": "^6.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^3.2.0",
+    "echarts": "^4.4.0",
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^3.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  }
+}
