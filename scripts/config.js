@@ -18,7 +18,7 @@ const builds = {
 
 function genConfig(name) {
   const opts = builds[name];
-  const externalRE = /^(react|react-dom|prop-types|lodash|echarts)/
+  const externalRE = /^(react|prop-types|lodash|echarts)/
   return {
     input: opts.entry,
     external: id => externalRE.test(id),
