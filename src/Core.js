@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { isEqual, pick, debounce, } from 'lodash';
 import echartsLib from 'echarts/lib/echarts';
-import 'echarts/lib/component/title';
 import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/legend';
 import 'echarts/lib/component/dataZoom';
@@ -57,7 +56,7 @@ export default class ChartsCore extends Component {
     this.addResizeListener();
   };
 
-  // TODO: 后期扩展参数使用  (需要继承的类都必须实现此方法)
+  // To extend later
   parseOption() {
     throw new Error('The method must be implemented');
   }
@@ -80,10 +79,9 @@ export default class ChartsCore extends Component {
 
   bindEvents() {
     const { events } = this.props;
-    const inst = this.echarts;
     const bind = (eventName, fn) => {
-      inst.on(eventName, (params) => {
-        fn(params, inst);
+      this.echarts.on(eventName, params => {
+        fn.call(this, params);
       });
     };
 
@@ -143,7 +141,7 @@ ChartsCore.defaultProps = {
   option: {},
   initOptions: {},
   setOptionOpts: {
-    notMerge: true, // 为 false 时，调用 setOption 有时不能正确显示
+    notMerge: true,
   },
   theme: 'default',
   events: {},
