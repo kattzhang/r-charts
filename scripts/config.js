@@ -8,7 +8,7 @@ const version = pkg.version;
 const banner =
   '/*!\n' +
   ` * r-charts v${version}\n` +
-  ` * (c) 2014-${new Date().getFullYear()} Katt Zhang\n` +
+  ` * (c) 2019-${new Date().getFullYear()} Katt Zhang\n` +
   ' * Released under the MIT License.\n' +
   ' */'
 
