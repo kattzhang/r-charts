@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.less';
 import RCharts from '../dist/r-charts.esm';
 import 'echarts/lib/chart/line';
 import 'echarts/lib/chart/bar';
 import 'echarts/lib/chart/Pie';
+import './App.less';
 
 function renderLine() {
   const option = {

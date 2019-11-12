@@ -15,7 +15,6 @@ npm install --save @cany/r-charts echarts
 ```js
 import React from 'react';
 import RCharts from '@cany/r-charts';
-import echarts from 'echarts/lib/echarts';
 import 'echarts/lib/chart/line';
 // import 'echarts/lib/chart/bar';
 // import 'echarts/lib/chart/pie';
