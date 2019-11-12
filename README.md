@@ -1,6 +1,6 @@
-# A simple chart components based on React and Echarts(>=3.0 & >=4.0), inspired by [v-charts](https://github.com/ElemeFE/v-charts) and [echarts-for-react](https://github.com/hustcc/echarts-for-react)
+# A simple chart components based on React and Echarts(>=3.0 & >=4.0)
 
-
+> inspired by [v-charts](https://github.com/ElemeFE/v-charts) and [echarts-for-react](https://github.com/hustcc/echarts-for-react)
 
 # Install
 
@@ -49,7 +49,7 @@ import 'echarts/lib/chart/line';
 
 - **`events`** (optional, object)
 
-  binding the echarts event, will be invoked with the `echarts event object` and `the echart object` as paramters.
+  binding the echarts event, it will be invoked with the `echarts event object` as paramters.
 
   ```js
   let events = {
