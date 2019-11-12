@@ -9,7 +9,6 @@ npm install --save @cany/r-charts echarts
 ```
 
 
-
 # Usage
 
 ```js
