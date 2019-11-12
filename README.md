@@ -58,7 +58,7 @@ import 'echarts/lib/chart/line';
   }
 
   <RCharts
-    option={this.getOption()}
+    option={ this.getOption() }
     style={{ height: 300 }}
     events={ events } 
   />
@@ -78,9 +78,7 @@ import 'echarts/lib/chart/line';
 
 # Component API
 
-- **`getEchartsInstance()`** : get the echarts instance, then you can use any `API of echarts`.
-
-  e.g:
+- **`getEchartsInstance()`** : get the echarts instance, then you can use any `API of echarts`. e.g:
 
   ```js
   <RCharts 
