@@ -4,7 +4,6 @@ import { isEqual, pick, debounce, } from 'lodash';
 import echartsLib from 'echarts/lib/echarts';
 import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/legend';
-import 'echarts/lib/component/dataZoom';
 
 export default class ChartsCore extends Component {
 
