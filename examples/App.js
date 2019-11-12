@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.less';
-import { ReLine } from '../dist/r-charts.esm';
+import RCharts from '../dist/r-charts.esm';
+import 'echarts/lib/chart/line';
+import 'echarts/lib/chart/bar';
+import 'echarts/lib/chart/Pie';
 
 function renderLine() {
   const option = {
@@ -17,7 +20,7 @@ function renderLine() {
     }]
   };
   return (
-    <ReLine
+    <RCharts
       option={option}
     />
   )
@@ -45,7 +48,7 @@ function renderBar() {
     ]
   };
   return (
-    <ReLine
+    <RCharts
       option={option}
     />
   )
@@ -96,7 +99,7 @@ function renderPie() {
     ]
   };
   return (
-    <ReLine
+    <RCharts
       option={option}
     />
   )
