@@ -9,7 +9,6 @@ npm install --save @cany/r-charts echarts
 ```
 
 
-
 # Usage
 
 ```js
@@ -29,7 +28,7 @@ import 'echarts/lib/chart/line';
 
 
 
-# component props
+# Component Props
 
 - **`option`** (required, object)
 
@@ -68,7 +67,7 @@ import 'echarts/lib/chart/line';
 
 - **`initOptions`** (optional, object)
 
-  options when create an echarts instance by invoking the [echart.init](https://www.echartsjs.com/zh/api.html#echarts.init) api
+  the third options when create an echarts instance by invoking the [echart.init](https://www.echartsjs.com/zh/api.html#echarts.init) api
 
 - **`setOptionOpts`** (optional, object)
 
@@ -78,22 +77,25 @@ import 'echarts/lib/chart/line';
 
 # Component API
 
-- **`getEchartsInstance()`** : get the echarts instance, then you can use any `API of echarts`. e.g:
+- **`getEchartsInstance()`** 
+
+   get the echarts instance, then you can use any `API of echarts`. e.g:
 
   ```js
   <RCharts 
-    ref={ inst => { this.echarts = inst } }
+    ref={ inst => { this.rcharts = inst } }
     option={ this.getOption() } 
   />
 
-  this.echarts.resize()
+  const echarts = this.rcharts..getEchartsInstance()
+  echarts.resize()
   ```
 
   **About API of echarts instance, can see** [echartsInstance](http://echarts.baidu.com/api.html#echartsInstance).
 
 
 
-# LICENSE
+# Licensee
 
 MIT@[kattzhang](https://github.com/kattzhang).
 
