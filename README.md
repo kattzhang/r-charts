@@ -28,7 +28,7 @@ import 'echarts/lib/chart/line';
 
 
 
-# component props
+# Component Props
 
 - **`option`** (required, object)
 
