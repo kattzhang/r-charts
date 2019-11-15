@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config ./scripts/webpack.config.js",
     "build": "node scripts/rollup.config.js",
-    "release": "sh scripts/git-release.sh && sh scripts/release.sh"
+    "pub": "sh scripts/git-release.sh && sh scripts/release.sh"
   },
   "keywords": [
     "react",
