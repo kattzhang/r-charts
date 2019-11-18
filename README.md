@@ -5,7 +5,7 @@
 # Installation
 
 ```sh
-npm install --save @cany/r-charts echarts
+npm install --save echarts @cany/r-charts
 ```
 
 
