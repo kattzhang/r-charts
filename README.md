@@ -31,10 +31,10 @@ import 'echarts/lib/chart/line';
 **inherit**
 
 ```js
-import Core from '@cany/r-charts';
+import RCharts from '@cany/r-charts';
 import 'echarts/lib/chart/line';
 
-export default class Reline extends Core {};
+export default class ReLine extends RCharts {};
 ```
 
 
