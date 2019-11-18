@@ -2,7 +2,7 @@
 
 > inspired by [v-charts](https://github.com/ElemeFE/v-charts) and [echarts-for-react](https://github.com/hustcc/echarts-for-react)
 
-# Install
+# Installation
 
 ```sh
 npm install --save @cany/r-charts echarts
@@ -10,6 +10,8 @@ npm install --save @cany/r-charts echarts
 
 
 # Usage
+
+**use directly**
 
 ```js
 import React from 'react';
@@ -26,6 +28,14 @@ import 'echarts/lib/chart/line';
 />
 ```
 
+**inherit**
+
+```js
+import Core from '@cany/r-charts';
+import 'echarts/lib/chart/line';
+
+export default class Reline extends Core {};
+```
 
 
 # Component Props
