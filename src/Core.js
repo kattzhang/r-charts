@@ -28,7 +28,7 @@ export default class ChartsCore extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const pickKeys = ['initOption', 'setOptionOpts', 'option', 'events', 'theme'];
+    const pickKeys = ['initOption', 'setOptionOpts', 'option', 'events', 'theme']
 
     if (
       !isEqual(pick(this.props, pickKeys), pick(prevProps, pickKeys))
