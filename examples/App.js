@@ -1,5 +1,5 @@
 import React from 'react';
-import RCharts from '../dist/r-charts.esm';
+import RCore from '@/Core';
 import 'echarts/lib/chart/line';
 import 'echarts/lib/chart/bar';
 import 'echarts/lib/chart/Pie';
@@ -20,10 +20,10 @@ function renderLine() {
     }]
   };
   return (
-    <RCharts
-      option={option}
+    <RCore
+      option={ option }
     />
-  )
+  );
 }
 
 function renderBar() {
@@ -33,41 +33,41 @@ function renderBar() {
     dataset: {
       dimensions: ['product', '2015', '2016', '2017'],
       source: [
-        {product: 'Matcha Latte', '2015': 43.3, '2016': 85.8, '2017': 93.7},
-        {product: 'Milk Tea', '2015': 83.1, '2016': 73.4, '2017': 55.1},
-        {product: 'Cheese Cocoa', '2015': 86.4, '2016': 65.2, '2017': 82.5},
-        {product: 'Walnut Brownie', '2015': 72.4, '2016': 53.9, '2017': 39.1}
+        { product: 'Matcha Latte', 2015: 43.3, 2016: 85.8, 2017: 93.7 },
+        { product: 'Milk Tea', 2015: 83.1, 2016: 73.4, 2017: 55.1 },
+        { product: 'Cheese Cocoa', 2015: 86.4, 2016: 65.2, 2017: 82.5 },
+        { product: 'Walnut Brownie', 2015: 72.4, 2016: 53.9, 2017: 39.1 }
       ]
     },
-    xAxis: {type: 'category'},
+    xAxis: { type: 'category' },
     yAxis: {},
     series: [
-      {type: 'bar'},
-      {type: 'bar'},
-      {type: 'bar'}
+      { type: 'bar' },
+      { type: 'bar' },
+      { type: 'bar' }
     ]
   };
   return (
-    <RCharts
-      option={option}
+    <RCore
+      option={ option }
     />
-  )
+  );
 }
 
 function renderPie() {
   const option = {
     tooltip: {
       trigger: 'item',
-      formatter: "{a} <br/>{b}: {c} ({d}%)"
+      formatter: '{a} <br/>{b}: {c} ({d}%)'
     },
     legend: {
       orient: 'horizontal',
-      data:['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+      data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
     },
     series: [
       {
-        name:'访问来源',
-        type:'pie',
+        name: '访问来源',
+        type: 'pie',
         radius: ['50%', '70%'],
         avoidLabelOverlap: false,
         label: {
@@ -88,21 +88,21 @@ function renderPie() {
             show: false
           }
         },
-        data:[
-          {value:335, name:'直接访问'},
-          {value:310, name:'邮件营销'},
-          {value:234, name:'联盟广告'},
-          {value:135, name:'视频广告'},
-          {value:1548, name:'搜索引擎'}
+        data: [
+          { value: 335, name: '直接访问' },
+          { value: 310, name: '邮件营销' },
+          { value: 234, name: '联盟广告' },
+          { value: 135, name: '视频广告' },
+          { value: 1548, name: '搜索引擎' }
         ]
       }
     ]
   };
   return (
-    <RCharts
+    <RCore
       option={option}
     />
-  )
+  );
 }
 
 export default function App() {
@@ -110,15 +110,15 @@ export default function App() {
     <div className="app">
       <ul>
         <li>
-          {renderLine()}
+          { renderLine() }
         </li>
         <li>
-          {renderBar()}
+          { renderBar() }
         </li>
         <li>
-          {renderPie()}
+          { renderPie() }
         </li>
       </ul>
     </div>
-  )
-};
+  );
+}

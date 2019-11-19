@@ -9,8 +9,9 @@
     "dist/*.js"
   ],
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config ./scripts/webpack.config.js",
+    "dev": "webpack-dev-server --progress --config ./scripts/webpack.config.js",
     "build": "node scripts/rollup.config.js",
+    "lint": "eslint --format friendly src/ examples/*.js",
     "pub": "sh scripts/git-release.sh && sh scripts/release.sh"
   },
   "keywords": [
@@ -31,9 +32,18 @@
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "echarts": "^4.4.0",
+    "eslint": "^6.6.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-formatter-friendly": "^7.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-standard": "^4.0.1",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",

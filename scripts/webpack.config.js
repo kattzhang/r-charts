@@ -7,30 +7,29 @@ function resolve (dir) {
 }
 
 module.exports = {
-  entry: './examples/main.js',
   mode: 'development',
   devtool: 'source-map',
+  entry: './examples/main.js',
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: resolve('examples/dist'),
     filename: 'index.js'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+    alias: {
+      '@': resolve('src'),
+    }
   },
   module: {
     rules: [
       {
-        test: /\.less$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'less-loader'
-        ]
-      },
-      {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
-        exclude: [resolve('node_modules')]
+        exclude: [resolve('node_modules')],
+      },
+      {
+        test: /\.less$/,
+        use: [ 'style-loader', 'css-loader', 'less-loader']
       },
       {
         test: /\.css$/,
@@ -47,9 +46,10 @@ module.exports = {
     }),
   ],
   devServer: {
-    port: '8099',
+    port: 8099,
+    inline: true,
     hot: true,
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: resolve('examples/dist'),
     stats: 'errors-only',
     open: true
   },
