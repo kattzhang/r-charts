@@ -1,6 +1,6 @@
 {
   "name": "@cany/r-charts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple chart components based on React and Echarts",
   "main": "dist/r-charts.common.js",
   "module": "dist/r-charts.esm.js",
