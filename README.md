@@ -1,6 +1,6 @@
 # A simple chart components based on React and Echarts(>=3.0 & >=4.0)
 
-> inspired by [v-charts](https://github.com/ElemeFE/v-charts) and [echarts-for-react](https://github.com/hustcc/echarts-for-react)
+> inspired by [v-charts](https://github.com/ElemeFE/v-charts)
 
 # Installation
 
