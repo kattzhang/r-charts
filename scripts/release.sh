@@ -26,6 +26,7 @@ then
   git rebase master
   git push origin dev
 
+  npm config set registry=https://registry.npmjs.org/
   if [[ $VERSION =~ "beta" ]]
   then
     npm publish --access public --tag beta
