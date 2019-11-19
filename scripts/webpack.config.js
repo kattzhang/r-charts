@@ -11,7 +11,7 @@ module.exports = {
   devtool: 'source-map',
   entry: './examples/main.js',
   output: {
-    path: resolve('examples/dist'),
+    path: resolve('examples/public'),
     filename: 'index.js'
   },
   resolve: {
@@ -46,10 +46,10 @@ module.exports = {
     }),
   ],
   devServer: {
-    port: 8099,
+    port: 8089,
     inline: true,
     hot: true,
-    contentBase: resolve('examples/dist'),
+    contentBase: resolve('examples/public'),
     stats: 'errors-only',
     open: true
   },

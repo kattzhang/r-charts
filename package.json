@@ -6,7 +6,7 @@
   "module": "dist/r-charts.esm.js",
   "files": [
     "src",
-    "dist/*.js"
+    "dist"
   ],
   "scripts": {
     "dev": "webpack-dev-server --progress --config ./scripts/webpack.config.js",
