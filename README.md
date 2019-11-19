@@ -1,15 +1,17 @@
 # A simple chart components based on React and Echarts(>=3.0 & >=4.0)
 
-> inspired by [v-charts](https://github.com/ElemeFE/v-charts) and [echarts-for-react](https://github.com/hustcc/echarts-for-react)
+> inspired by [v-charts](https://github.com/ElemeFE/v-charts)
 
-# Install
+# Installation
 
 ```sh
-npm install --save @cany/r-charts echarts
+npm install --save echarts @cany/r-charts
 ```
 
 
 # Usage
+
+**use directly**
 
 ```js
 import React from 'react';
@@ -26,6 +28,14 @@ import 'echarts/lib/chart/line';
 />
 ```
 
+**inherit**
+
+```js
+import RCharts from '@cany/r-charts';
+import 'echarts/lib/chart/line';
+
+export default class ReLine extends RCharts {};
+```
 
 
 # Component Props

@@ -4,6 +4,7 @@ import { isEqual, pick, debounce, } from 'lodash';
 import echartsLib from 'echarts/lib/echarts';
 import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/legend';
+import { hasOwn } from './util';
 
 export default class ChartsCore extends Component {
 
@@ -27,7 +28,7 @@ export default class ChartsCore extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const pickKeys = ['initOption', 'setOptionOpts', 'option', 'events', 'theme',];
+    const pickKeys = ['initOption', 'setOptionOpts', 'option', 'events', 'theme'];
 
     if (
       !isEqual(pick(this.props, pickKeys), pick(prevProps, pickKeys))
@@ -53,7 +54,7 @@ export default class ChartsCore extends Component {
     this.renderDom();
     this.bindEvents();
     this.addResizeListener();
-  };
+  }
 
   // To extend later
   parseOption() {
@@ -74,7 +75,7 @@ export default class ChartsCore extends Component {
     this.echarts.setOption(option, setOptionOpts);
 
     return this.echarts;
-  };
+  }
 
   bindEvents() {
     const { events } = this.props;
@@ -84,10 +85,12 @@ export default class ChartsCore extends Component {
       });
     };
 
-    for(const key in events) {
-      bind(key, events[key]);
+    for (const key in events) {
+      if (hasOwn(events, key)) {
+        bind(key, events[key]);
+      }
     }
-  };
+  }
 
   addResizeListener() {
     window.addEventListener('resize', this.handleResize);
@@ -104,7 +107,7 @@ export default class ChartsCore extends Component {
   clean() {
     this.removeResizeListener();
     this.echarts.dispose(this.el);
-  };
+  }
 
   render() {
     const { style, className } = this.props;
@@ -112,7 +115,7 @@ export default class ChartsCore extends Component {
       height: 300,
       ...style,
     };
-    
+
     return (
       <div
         ref={el => { this.el = el; }}
