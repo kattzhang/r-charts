@@ -1,4 +1,4 @@
-# A simple chart components based on React and Echarts(>=3.0 & >=4.0)
+# A simple chart components based on React and Echarts(3.x & 4.x)
 
 > inspired by [v-charts](https://github.com/ElemeFE/v-charts)
 
