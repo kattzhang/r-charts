@@ -37,7 +37,7 @@ import 'echarts/lib/chart/line';
 
 export default class ReLine extends RCharts {};
 
-// src/main.js
+// main.js
 <ReLine
   option={this.getOption()}
   theme={'ThemeName'}
