@@ -11,7 +11,7 @@ npm install --save echarts @cany/r-charts
 
 # Usage
 
-**use directly**
+**to use directly**
 
 ```js
 import React from 'react';
@@ -31,10 +31,20 @@ import 'echarts/lib/chart/line';
 **inherit**
 
 ```js
+// src/ReLine.js
 import RCharts from '@cany/r-charts';
 import 'echarts/lib/chart/line';
 
 export default class ReLine extends RCharts {};
+
+// src/main.js
+import Reline from './Reline.js';
+
+<ReLine
+  option={this.getOption()}
+  theme={'ThemeName'}
+  events={this.events}
+/>
 ```
 
 
