@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 git checkout dev
 
 if test -n "$(git status --porcelain)"; then
