@@ -31,15 +31,13 @@ import 'echarts/lib/chart/line';
 **inherit**
 
 ```js
-// src/ReLine.js
+// ReLine.js
 import RCharts from '@cany/r-charts';
 import 'echarts/lib/chart/line';
 
 export default class ReLine extends RCharts {};
 
 // src/main.js
-import Reline from './Reline.js';
-
 <ReLine
   option={this.getOption()}
   theme={'ThemeName'}
