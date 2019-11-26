@@ -9,8 +9,9 @@
     "lib"
   ],
   "scripts": {
-    "dev": "webpack-dev-server --progress --config ./build/webpack.config.js",
-    "build": "rimraf lib && node build/rollup.config.js",
+    "dev": "webpack-dev-server --watch --config ./build/webpack.config.js",
+    "clean": "rimraf lib",
+    "build": "npm run clean && node build/rollup.config.js",
     "lint": "eslint --format friendly src/ examples/*.js",
     "pub": "sh build/git-release.sh && sh build/release.sh"
   },
@@ -45,7 +46,6 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-standard": "^4.0.1",
     "html-webpack-plugin": "^3.2.0",
-    "husky": "^3.1.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "prop-types": "^15.7.2",
@@ -69,10 +69,5 @@
   "bugs": {
     "url": "https://github.com/kattzhang/r-charts/issues"
   },
-  "homepage": "https://github.com/kattzhang/r-charts#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  }
+  "homepage": "https://github.com/kattzhang/r-charts#readme"
 }
