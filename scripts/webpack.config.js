@@ -12,7 +12,7 @@ module.exports = {
   entry: './examples/main.js',
   output: {
     path: resolve('examples/public'),
-    filename: 'index.js'
+    filename: 'index.js',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -23,17 +23,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: [resolve('node_modules')],
       },
       {
-        test: /\.less$/,
+        test: /\.(less|css)$/,
         use: [ 'style-loader', 'css-loader', 'less-loader']
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
       }
     ]
   },
@@ -46,10 +42,9 @@ module.exports = {
     }),
   ],
   devServer: {
-    port: 8089,
-    inline: true,
+    port: 8085,
     hot: true,
-    contentBase: resolve('examples/public'),
+    publicPath: '/',
     stats: 'errors-only',
     open: true
   },
