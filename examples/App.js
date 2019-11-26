@@ -7,6 +7,9 @@ import './App.less';
 
 function renderLine() {
   const option = {
+    tooltip: {
+      trigger: 'axis'
+    },
     xAxis: {
       type: 'category',
       data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']

@@ -6,7 +6,7 @@ import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/legend';
 import { hasOwn } from './util';
 
-export default class ChartsCore extends Component {
+export default class RChartsCore extends Component {
 
   static registerTheme(themeName, config) {
     echartsLib.registerTheme(themeName, config);
@@ -126,7 +126,7 @@ export default class ChartsCore extends Component {
   }
 }
 
-ChartsCore.propTypes = {
+RChartsCore.propTypes = {
   option: PropTypes.object.isRequired,
   initOptions: PropTypes.object,
   setOptionOpts: PropTypes.object,
@@ -139,7 +139,7 @@ ChartsCore.propTypes = {
   className: PropTypes.string,
 };
 
-ChartsCore.defaultProps = {
+RChartsCore.defaultProps = {
   option: {},
   initOptions: {},
   setOptionOpts: {
