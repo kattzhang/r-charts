@@ -9,7 +9,7 @@ function resolve (dir) {
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: './examples/main.js',
+  entry: './examples/src/main.js',
   output: {
     path: resolve('examples/public'),
     filename: 'index.js',
@@ -37,7 +37,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: resolve('examples/index.html'),
+      template: resolve('examples/src/index.html'),
       inject: true
     }),
   ],
