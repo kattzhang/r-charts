@@ -13,14 +13,19 @@ module.exports = {
     browser: true
   },
   extends: [
-    'standard',
-    'plugin:react/recommended'
+    'eslint-config-airbnb'
   ],
   rules: {
-    'semi': ['error', 'always'],
-    'space-before-function-paren': ['error', 'never'],
     'comma-dangle': 0,
     'no-trailing-spaces': 0,
-    'padded-blocks': 0,
+    'no-restricted-syntax': 0,
+    'operator-linebreak': 0,
+    'class-methods-use-this': 0,
+    'object-curly-newline': 0,
+    'import/no-extraneous-dependencies': 0,
+    'import/no-unresolved': 0,
+    'react/destructuring-assignment': 0,
+    'react/jsx-filename-extension': 0,
+    'react/sort-comp': 0,
   }
 };

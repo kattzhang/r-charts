@@ -7,7 +7,6 @@ import 'echarts/lib/component/legend';
 import { hasOwn } from './util';
 
 export default class RChartsCore extends Component {
-
   static registerTheme(themeName, config) {
     echartsLib.registerTheme(themeName, config);
   }
@@ -21,10 +20,6 @@ export default class RChartsCore extends Component {
 
   componentDidMount() {
     this.init();
-  }
-
-  componentWillUnmount() {
-    this.clean();
   }
 
   componentDidUpdate(prevProps) {
@@ -45,9 +40,14 @@ export default class RChartsCore extends Component {
       try {
         this.renderDom().resize();
       } catch (e) {
+        // eslint-disable-next-line no-console
         console.warn(e);
       }
     }
+  }
+
+  componentWillUnmount() {
+    this.clean();
   }
 
   init() {
@@ -80,7 +80,7 @@ export default class RChartsCore extends Component {
   bindEvents() {
     const { events } = this.props;
     const bind = (eventName, fn) => {
-      this.echarts.on(eventName, params => {
+      this.echarts.on(eventName, (params) => {
         fn.call(this, params);
       });
     };
@@ -118,7 +118,7 @@ export default class RChartsCore extends Component {
 
     return (
       <div
-        ref={el => { this.el = el; }}
+        ref={(el) => { this.el = el; }}
         className={className}
         style={newStyle}
       />
@@ -127,20 +127,19 @@ export default class RChartsCore extends Component {
 }
 
 RChartsCore.propTypes = {
-  option: PropTypes.object.isRequired,
-  initOptions: PropTypes.object,
-  setOptionOpts: PropTypes.object,
+  option: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  initOptions: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  setOptionOpts: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   theme: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object
   ]),
-  events: PropTypes.object,
-  style: PropTypes.object,
+  events: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   className: PropTypes.string,
 };
 
 RChartsCore.defaultProps = {
-  option: {},
   initOptions: {},
   setOptionOpts: {
     notMerge: true,

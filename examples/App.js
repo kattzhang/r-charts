@@ -24,7 +24,7 @@ function renderLine() {
   };
   return (
     <RCore
-      option={ option }
+      option={option}
     />
   );
 }
@@ -52,7 +52,7 @@ function renderBar() {
   };
   return (
     <RCore
-      option={ option }
+      option={option}
     />
   );
 }

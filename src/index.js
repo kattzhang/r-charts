@@ -1,3 +1,5 @@
 import Core from './Core';
 
-export default Core;
+export {
+  Core as default 
+};
