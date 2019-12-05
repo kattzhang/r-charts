@@ -115,7 +115,7 @@ export default class ReLine extends RCharts {};
 
 # Licensee
 
-MIT@[kattzhang](https://github.com/kattzhang).
+MIT[@kattzhang](https://github.com/kattzhang).
 
 
 
