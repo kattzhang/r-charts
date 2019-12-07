@@ -2,7 +2,7 @@
 
 > inspired by [v-charts](https://github.com/ElemeFE/v-charts)
 
-# Installation
+# Install
 
 ```sh
 npm install --save echarts @cany/r-charts
