@@ -19,7 +19,7 @@
     "react",
     "echarts"
   ],
-  "author": "KattZhang <1193055507@qq.com>",
+  "author": "KimoZhang <1193055507@qq.com>",
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.15"
@@ -63,10 +63,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kattzhang/r-charts.git"
+    "url": "git+https://github.com/kimozhang/r-charts.git"
   },
   "bugs": {
-    "url": "https://github.com/kattzhang/r-charts/issues"
+    "url": "https://github.com/kimozhang/r-charts/issues"
   },
-  "homepage": "https://github.com/kattzhang/r-charts#readme"
+  "homepage": "https://github.com/kimozhang/r-charts#readme"
 }

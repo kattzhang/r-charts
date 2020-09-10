@@ -1,7 +1,5 @@
 # A simple chart components based on React and Echarts(3.x & 4.x)
 
-> inspired by [v-charts](https://github.com/ElemeFE/v-charts)
-
 # Install
 
 ```sh
@@ -115,7 +113,7 @@ export default class ReLine extends RCharts {};
 
 # Licensee
 
-MIT[@kattzhang](https://github.com/kattzhang).
+MIT[@kimozhang](https://github.com/kimozhang).
 
 
 
