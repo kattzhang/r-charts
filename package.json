@@ -3,14 +3,14 @@
   "version": "0.0.4",
   "description": "A simple chart components based on React and Echarts",
   "main": "dist/r-echarts.common.js",
-  "module": "lib/r-echarts.esm.js",
+  "module": "dist/r-echarts.esm.js",
   "files": [
     "src",
     "lib"
   ],
   "scripts": {
     "dev": "webpack-dev-server --watch",
-    "build": "rimraf dist && node scripts/rollup.config.js",
+    "build": "rimraf dist && rollup -c",
     "lint": "eslint -f friendly src demo",
     "release": "sh scripts/git-release.sh && sh scripts/release.sh"
   },
