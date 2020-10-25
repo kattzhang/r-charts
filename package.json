@@ -6,7 +6,7 @@
   "module": "dist/r-echarts.esm.js",
   "files": [
     "src",
-    "lib"
+    "dist"
   ],
   "scripts": {
     "dev": "webpack-dev-server --watch",
