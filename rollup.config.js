@@ -1,5 +1,5 @@
-const babel = require('rollup-plugin-babel')
 const resolve = require('rollup-plugin-node-resolve')
+const babel = require('rollup-plugin-babel')
 
 export default {
   input: './src/index.js',
