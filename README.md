@@ -52,7 +52,7 @@ export default class ReLine extends RCharts {};
 
 - **`option`** (required, object)
 
-  the echarts option config, can see [option](http://echarts.baidu.com/option.html#title).
+  the echarts option config, see [option](http://echarts.baidu.com/option.html#title).
 
 - **`style`** (optional, object)
 
