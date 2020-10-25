@@ -9,17 +9,16 @@
     "lib"
   ],
   "scripts": {
-    "dev": "webpack-dev-server --watch --config ./build/webpack.config.js",
-    "clean": "rimraf lib",
-    "build": "npm run clean && node build/rollup.config.js",
-    "lint": "eslint -f friendly src examples",
-    "release": "sh build/git-release.sh && sh build/release.sh"
+    "dev": "webpack-dev-server --watch --config scripts/webpack.demo.js",
+    "build": "rimraf lib && node scripts/rollup.config.js",
+    "lint": "eslint -f friendly src demo",
+    "release": "sh script/git-release.sh && sh script/release.sh"
   },
   "keywords": [
     "react",
     "echarts"
   ],
-  "author": "KimoZhang <1193055507@qq.com>",
+  "author": "Kimo Zhang <1193055507@qq.com>",
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.17.15"
