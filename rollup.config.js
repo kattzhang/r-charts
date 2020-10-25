@@ -6,11 +6,11 @@ export default {
   output:[
     {
       format: 'esm',
-      file: 'dist/r-echarts.esm.js'
+      file: 'dist/react-echarts.esm.js'
     },
     {
       format: 'cjs',
-      file: 'dist/r-echarts.common.js',
+      file: 'dist/react-echarts.common.js',
       exports: 'auto'
     },
   ],

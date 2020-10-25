@@ -1,9 +1,9 @@
 {
-  "name": "@cany/r-charts",
-  "version": "0.0.4",
+  "name": "@cany/react-echarts",
+  "version": "0.0.1",
   "description": "A simple chart components based on React and Echarts",
-  "main": "dist/r-echarts.common.js",
-  "module": "dist/r-echarts.esm.js",
+  "main": "dist/react-echarts.common.js",
+  "module": "dist/react-echarts.esm.js",
   "files": [
     "src",
     "dist"
@@ -61,10 +61,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kimozhang/r-charts.git"
+    "url": "git+https://github.com/kimozhang/react-echarts.git"
   },
   "bugs": {
-    "url": "https://github.com/kimozhang/r-charts/issues"
+    "url": "https://github.com/kimozhang/react-echarts/issues"
   },
-  "homepage": "https://github.com/kimozhang/r-charts#readme"
+  "homepage": "https://github.com/kimozhang/react-echarts#readme"
 }

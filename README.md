@@ -1,13 +1,13 @@
-# r-echarts
+# react-echarts
 
 A simple chart components based on React and Echarts(3.x & 4.x)
 
 # Install
 
 ```sh
-$ npm i echarts @cany/r-charts
+$ npm i echarts @cany/react-echarts
 # or
-$ yarn add echarts @cany/r-charts
+$ yarn add echarts @cany/react-echarts
 ```
 
 
@@ -17,7 +17,7 @@ $ yarn add echarts @cany/r-charts
 
 ```js
 import React from 'react';
-import RCharts from '@cany/r-charts';
+import RCharts from '@cany/react-echarts';
 import 'echarts/lib/chart/line';
 // import 'echarts/lib/chart/bar';
 // import 'echarts/lib/chart/pie';
@@ -34,7 +34,7 @@ import 'echarts/lib/chart/line';
 
 ```js
 // ReLine.js
-import RCharts from '@cany/r-charts';
+import RCharts from '@cany/react-echarts';
 import 'echarts/lib/chart/line';
 
 export default class ReLine extends RCharts {};
