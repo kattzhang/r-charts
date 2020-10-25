@@ -12,7 +12,6 @@ $ npm i echarts @cany/react-echarts
 $ yarn add echarts @cany/react-echarts
 ```
 
-
 # Usage
 
 **to use directly**
