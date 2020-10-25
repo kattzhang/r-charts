@@ -1,6 +1,8 @@
 # react-echarts
 
-A simple chart components based on React and Echarts(3.x & 4.x)
+A simple chart components based on React and Echarts(3.x & 4.x).
+
+**Note**: `@cany/r-charts` is no longer maintained.
 
 # Install
 
