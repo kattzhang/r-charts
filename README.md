@@ -1,9 +1,13 @@
-# A simple chart components based on React and Echarts(3.x & 4.x)
+# r-echarts
+
+A simple chart components based on React and Echarts(3.x & 4.x)
 
 # Install
 
 ```sh
-npm install --save echarts @cany/r-charts
+$ npm i echarts @cany/r-charts
+# or
+$ yarn add echarts @cany/r-charts
 ```
 
 
@@ -111,9 +115,9 @@ export default class ReLine extends RCharts {};
 
 
 
-# Licensee
+# License
 
-MIT[@kimozhang](https://github.com/kimozhang).
+[MIT](LICENT)
 
 
 
