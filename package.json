@@ -2,17 +2,17 @@
   "name": "@cany/r-charts",
   "version": "0.0.4",
   "description": "A simple chart components based on React and Echarts",
-  "main": "lib/index.common.js",
-  "module": "lib/index.esm.js",
+  "main": "dist/r-echarts.common.js",
+  "module": "lib/r-echarts.esm.js",
   "files": [
     "src",
     "lib"
   ],
   "scripts": {
-    "dev": "webpack-dev-server --watch --config scripts/webpack.demo.js",
-    "build": "rimraf lib && node scripts/rollup.config.js",
+    "dev": "webpack-dev-server --watch",
+    "build": "rimraf dist && node scripts/rollup.config.js",
     "lint": "eslint -f friendly src demo",
-    "release": "sh script/git-release.sh && sh script/release.sh"
+    "release": "sh scripts/git-release.sh && sh scripts/release.sh"
   },
   "keywords": [
     "react",
